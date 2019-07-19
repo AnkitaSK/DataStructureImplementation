@@ -23,3 +23,17 @@ print("Hello, World!")
 //queue.enqueue(90)
 //queue.dequeue()
 //print(queue)
+
+
+let adjacencyList = AdjacencyList<Int>()
+let one = adjacencyList.createVertex(data: 1)
+let two = adjacencyList.createVertex(data: 2)
+let three = adjacencyList.createVertex(data: 3)
+
+adjacencyList.add(.directed, from: one, to: two, weight: 5)
+adjacencyList.add(.directed, from: two, to: three, weight: 10)
+adjacencyList.add(.directed, from: three, to: one, weight: 15)
+
+adjacencyList.add(.undirected, from: two, to: one, weight: 2)
+
+print(adjacencyList.description)

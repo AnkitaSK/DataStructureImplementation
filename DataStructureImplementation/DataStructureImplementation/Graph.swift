@@ -28,6 +28,12 @@ extension Vertex: Hashable {
     }
 }
 
+extension Vertex: CustomStringConvertible {
+    public var description: String {
+        return "\(data)"
+    }
+}
+
 // Edge
 
 enum EdgeType {
@@ -55,8 +61,8 @@ protocol Graphable {
     var description: CustomStringConvertible {get}
     func createVertex(data: Element) -> Vertex<Element>
     func add(_ type: EdgeType, from source: Vertex<Element>, to destination: Vertex<Element>, weight: Double?)
-    func weight(from source: Vertex<Element>, to destination: Vertex<Element>)
-    func edges(from source: Vertex<Element>) -> [Edge<Element>]
+    func weight(from source: Vertex<Element>, to destination: Vertex<Element>) -> Double?
+    func edges(from source: Vertex<Element>) -> [Edge<Element>]?
 }
 
 
@@ -67,34 +73,71 @@ class AdjacencyList<T:Hashable> {
     public init() {}
 }
 
-//extension AdjacencyList: Graphable {
-//    typealias Element = T
-//    
-////    var description: CustomStringConvertible {
-////
-////    }
-//    
-//    func createVertex(data: T) -> Vertex<T> {
-//        let vertex = Vertex(data: data)
-//        if adjacencyDict[vertex] == nil {
-//            adjacencyDict[vertex] = []
-//        }
-//        return vertex
-//    }
-//    
-////    func add(_ type: EdgeType, from source: Vertex<T>, to destination: Vertex<T>, weight: Double?) {
-////        <#code#>
-////    }
-//    
-////    func weight(from source: Vertex<T>, to destination: Vertex<T>) {
-////        <#code#>
-////    }
-//    
-////    func edges(from source: Vertex<T>) -> [Edge<T>] {
-////        <#code#>
-////    }
-//    
-//    
-//    
-//    
-//}
+extension AdjacencyList: Graphable {
+    typealias Element = T
+    
+    fileprivate func addDirectedEdge(from source: Vertex<Element>, to destination: Vertex<Element>, weight: Double?) {
+        let edge = Edge(source: source, destination: destination, weight: weight)
+        adjacencyDict[source]?.append(edge)
+    }
+    
+    fileprivate func addUndirectedEdge(from source: Vertex<Element>, to destination: Vertex<Element>, weight: Double?) {
+//        addDirectedEdge(from: source, to: destination, weight: weight)
+//        addDirectedEdge(from: destination, to: source, weight: weight)
+        
+        if self.weight(from: source, to: destination) == nil {
+            addDirectedEdge(from: source, to: destination, weight: weight)
+        }
+        
+        if self.weight(from: destination, to: source) == nil {
+            addDirectedEdge(from: destination, to: source, weight: weight)
+        }
+    }
+
+    var description: CustomStringConvertible {
+        var result = ""
+        for (vertex, edges) in adjacencyDict {
+            var edgeString = ""
+            for (index, edge) in edges.enumerated() {
+                if index != edges.count - 1 {
+                    edgeString.append("{\(edge.destination), \(edge.weight ?? 0.0)}, ")
+                } else {
+                    edgeString.append("{\(edge.destination), \(edge.weight ?? 0.0)}")
+                }
+            }
+            result.append("\(vertex) ----> [\(edgeString)]\n")
+        }
+        return result
+    }
+
+    func createVertex(data: T) -> Vertex<T> {
+        let vertex = Vertex(data: data)
+        if adjacencyDict[vertex] == nil {
+            adjacencyDict[vertex] = []
+        }
+        return vertex
+    }
+
+    func add(_ type: EdgeType, from source: Vertex<T>, to destination: Vertex<T>, weight: Double?) {
+        switch type {
+        case .directed:
+            addDirectedEdge(from: source, to: destination, weight: weight)
+        case .undirected:
+            addUndirectedEdge(from: source, to: destination, weight: weight)
+        }
+    }
+
+    func weight(from source: Vertex<T>, to destination: Vertex<T>) -> Double? {
+        guard let edges = adjacencyDict[source] else {
+            return nil
+        }
+        
+        let filteredByDestination = edges.filter({$0.destination == destination})
+        return filteredByDestination.count > 0 ? filteredByDestination[0].weight : nil
+    }
+
+    func edges(from source: Vertex<T>) -> [Edge<T>]? {
+        return adjacencyDict[source]
+    }
+
+}
