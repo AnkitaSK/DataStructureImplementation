@@ -10,7 +10,7 @@
 		2B1F6C3422E1FA7D00FCDC17 /* Graph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B1F6C3322E1FA7D00FCDC17 /* Graph.swift */; };
 		F64B7B8422E0279000F7AFCB /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64B7B8322E0279000F7AFCB /* main.swift */; };
 		F64B7B8D22E028E900F7AFCB /* LinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64B7B8C22E028E900F7AFCB /* LinkedList.swift */; };
-		F64B7B8F22E0403100F7AFCB /* DFSImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64B7B8E22E0403100F7AFCB /* DFSImplementation.swift */; };
+		F64B7B8F22E0403100F7AFCB /* BFSImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64B7B8E22E0403100F7AFCB /* BFSImplementation.swift */; };
 		F64B7B9122E040FE00F7AFCB /* Queue.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64B7B9022E040FE00F7AFCB /* Queue.swift */; };
 /* End PBXBuildFile section */
 
@@ -31,7 +31,7 @@
 		F64B7B8022E0279000F7AFCB /* DataStructureImplementation */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = DataStructureImplementation; sourceTree = BUILT_PRODUCTS_DIR; };
 		F64B7B8322E0279000F7AFCB /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		F64B7B8C22E028E900F7AFCB /* LinkedList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkedList.swift; sourceTree = "<group>"; };
-		F64B7B8E22E0403100F7AFCB /* DFSImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DFSImplementation.swift; sourceTree = "<group>"; };
+		F64B7B8E22E0403100F7AFCB /* BFSImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BFSImplementation.swift; sourceTree = "<group>"; };
 		F64B7B9022E040FE00F7AFCB /* Queue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Queue.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -68,7 +68,7 @@
 				F64B7B8322E0279000F7AFCB /* main.swift */,
 				F64B7B8C22E028E900F7AFCB /* LinkedList.swift */,
 				F64B7B9022E040FE00F7AFCB /* Queue.swift */,
-				F64B7B8E22E0403100F7AFCB /* DFSImplementation.swift */,
+				F64B7B8E22E0403100F7AFCB /* BFSImplementation.swift */,
 				2B1F6C3322E1FA7D00FCDC17 /* Graph.swift */,
 			);
 			path = DataStructureImplementation;
@@ -133,7 +133,7 @@
 			files = (
 				F64B7B8D22E028E900F7AFCB /* LinkedList.swift in Sources */,
 				F64B7B8422E0279000F7AFCB /* main.swift in Sources */,
-				F64B7B8F22E0403100F7AFCB /* DFSImplementation.swift in Sources */,
+				F64B7B8F22E0403100F7AFCB /* BFSImplementation.swift in Sources */,
 				F64B7B9122E040FE00F7AFCB /* Queue.swift in Sources */,
 				2B1F6C3422E1FA7D00FCDC17 /* Graph.swift in Sources */,
 			);

@@ -10,6 +10,7 @@ import Foundation
 
 print("Hello, World!")
 
+//// Linked list testing
 //var testLinkedList = LinkedList<Int>()
 //testLinkedList.append(value: 1)
 //testLinkedList.append(value: 2)
@@ -17,6 +18,7 @@ print("Hello, World!")
 //
 //print(testLinkedList)
 
+//// Queue testing
 //var queue = Queue<Int>()
 //queue.enqueue(1)
 //queue.enqueue(5)
@@ -24,7 +26,7 @@ print("Hello, World!")
 //queue.dequeue()
 //print(queue)
 
-
+// Graph adjacency list testing
 let adjacencyList = AdjacencyList<Int>()
 let one = adjacencyList.createVertex(data: 1)
 let two = adjacencyList.createVertex(data: 2)
@@ -37,3 +39,13 @@ adjacencyList.add(.directed, from: three, to: one, weight: 15)
 adjacencyList.add(.undirected, from: two, to: one, weight: 2)
 
 print(adjacencyList.description)
+
+
+// BFS testing
+if let edges = adjacencyList.breadthFirstSearch(from: one, to: three) {
+    for edge in edges {
+        print("\(edge.source) --> \(edge.destination)")
+    }
+}
+
+
