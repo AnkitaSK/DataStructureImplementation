@@ -42,20 +42,23 @@ print(adjacencyList.description)
 
 
 // BFS testing
-if let edges = adjacencyList.breadthFirstSearch(from: one, to: three) {
-    for edge in edges {
-        print("\(edge.source) --> \(edge.destination)")
-    }
-}
+//if let edges = adjacencyList.breadthFirstSearch(from: one, to: three) {
+//    for edge in edges {
+//        print("\(edge.source) --> \(edge.destination)")
+//    }
+//}
 
 // Stack testing
-var stack = Stack<Int>()
-stack.push(1)
-stack.push(2)
-stack.push(3)
+//var stack = Stack<Int>()
+//stack.push(1)
+//stack.push(2)
+//stack.push(3)
+//
+//stack.pop()
+//
+//print(stack)
 
-stack.pop()
-
-print(stack)
-
-
+// DFS testing
+if let stackValues = adjacencyList.depthFirstSearch(from: one, to: three) {
+    print(stackValues)
+}
