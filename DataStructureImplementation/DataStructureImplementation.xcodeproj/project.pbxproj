@@ -12,6 +12,7 @@
 		F64B7B8D22E028E900F7AFCB /* LinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64B7B8C22E028E900F7AFCB /* LinkedList.swift */; };
 		F64B7B8F22E0403100F7AFCB /* BFSImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64B7B8E22E0403100F7AFCB /* BFSImplementation.swift */; };
 		F64B7B9122E040FE00F7AFCB /* Queue.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64B7B9022E040FE00F7AFCB /* Queue.swift */; };
+		F6F4CFF122E38BD0006FF199 /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F4CFF022E38BD0006FF199 /* Stack.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -33,6 +34,7 @@
 		F64B7B8C22E028E900F7AFCB /* LinkedList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkedList.swift; sourceTree = "<group>"; };
 		F64B7B8E22E0403100F7AFCB /* BFSImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BFSImplementation.swift; sourceTree = "<group>"; };
 		F64B7B9022E040FE00F7AFCB /* Queue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Queue.swift; sourceTree = "<group>"; };
+		F6F4CFF022E38BD0006FF199 /* Stack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stack.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,8 +70,9 @@
 				F64B7B8322E0279000F7AFCB /* main.swift */,
 				F64B7B8C22E028E900F7AFCB /* LinkedList.swift */,
 				F64B7B9022E040FE00F7AFCB /* Queue.swift */,
-				F64B7B8E22E0403100F7AFCB /* BFSImplementation.swift */,
+				F6F4CFF022E38BD0006FF199 /* Stack.swift */,
 				2B1F6C3322E1FA7D00FCDC17 /* Graph.swift */,
+				F64B7B8E22E0403100F7AFCB /* BFSImplementation.swift */,
 			);
 			path = DataStructureImplementation;
 			sourceTree = "<group>";
@@ -135,6 +138,7 @@
 				F64B7B8422E0279000F7AFCB /* main.swift in Sources */,
 				F64B7B8F22E0403100F7AFCB /* BFSImplementation.swift in Sources */,
 				F64B7B9122E040FE00F7AFCB /* Queue.swift in Sources */,
+				F6F4CFF122E38BD0006FF199 /* Stack.swift in Sources */,
 				2B1F6C3422E1FA7D00FCDC17 /* Graph.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
