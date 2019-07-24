@@ -13,6 +13,7 @@
 		F64B7B8F22E0403100F7AFCB /* BFSImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64B7B8E22E0403100F7AFCB /* BFSImplementation.swift */; };
 		F64B7B9122E040FE00F7AFCB /* Queue.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64B7B9022E040FE00F7AFCB /* Queue.swift */; };
 		F6D2C84C22E4E33C0098E854 /* Heap.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D2C84B22E4E33C0098E854 /* Heap.swift */; };
+		F6D2C84E22E7FCEA0098E854 /* BinaryTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D2C84D22E7FCEA0098E854 /* BinaryTree.swift */; };
 		F6F4CFF122E38BD0006FF199 /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F4CFF022E38BD0006FF199 /* Stack.swift */; };
 		F6F4CFF322E390BC006FF199 /* DFSImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F4CFF222E390BC006FF199 /* DFSImplementation.swift */; };
 /* End PBXBuildFile section */
@@ -37,6 +38,7 @@
 		F64B7B8E22E0403100F7AFCB /* BFSImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BFSImplementation.swift; sourceTree = "<group>"; };
 		F64B7B9022E040FE00F7AFCB /* Queue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Queue.swift; sourceTree = "<group>"; };
 		F6D2C84B22E4E33C0098E854 /* Heap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Heap.swift; sourceTree = "<group>"; };
+		F6D2C84D22E7FCEA0098E854 /* BinaryTree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinaryTree.swift; sourceTree = "<group>"; };
 		F6F4CFF022E38BD0006FF199 /* Stack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stack.swift; sourceTree = "<group>"; };
 		F6F4CFF222E390BC006FF199 /* DFSImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DFSImplementation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -79,6 +81,7 @@
 				F6D2C84B22E4E33C0098E854 /* Heap.swift */,
 				F64B7B8E22E0403100F7AFCB /* BFSImplementation.swift */,
 				F6F4CFF222E390BC006FF199 /* DFSImplementation.swift */,
+				F6D2C84D22E7FCEA0098E854 /* BinaryTree.swift */,
 			);
 			path = DataStructureImplementation;
 			sourceTree = "<group>";
@@ -145,6 +148,7 @@
 				F6F4CFF322E390BC006FF199 /* DFSImplementation.swift in Sources */,
 				F6D2C84C22E4E33C0098E854 /* Heap.swift in Sources */,
 				F64B7B8F22E0403100F7AFCB /* BFSImplementation.swift in Sources */,
+				F6D2C84E22E7FCEA0098E854 /* BinaryTree.swift in Sources */,
 				F64B7B9122E040FE00F7AFCB /* Queue.swift in Sources */,
 				F6F4CFF122E38BD0006FF199 /* Stack.swift in Sources */,
 				2B1F6C3422E1FA7D00FCDC17 /* Graph.swift in Sources */,
